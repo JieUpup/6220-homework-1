@@ -1,7 +1,7 @@
 import sys
 from collections import Counter
 
-
+# define a function to find the items from the file
 def cardninality_items(filename):
     f = open(filename)
     s = set()
@@ -45,7 +45,7 @@ def prob_S(si, data):
     counters = Counter(new_data)
     return counters[tuple(si)]/float(len(data))
 
-
+# test and output
 filename = sys.argv[1]
 print(cardninality_items(filename))
 sets = all_itemsets(filename)
